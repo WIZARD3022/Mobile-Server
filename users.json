@@ -1,4 +1,124 @@
 {
     "users": [
+        {
+            "username": "v",
+            "email": "v",
+            "password": "scrypt:32768:8:1$Vi3HYXk0AQeP4k0P$8df13dce77e70e054c73f722621cb043ff80fe930b646079cd6bc92214ca89ece3ac0d34bd5901a2df2067999e3b786f9709b7c3525cf8c59645ece081bd2952",
+            "profile": {
+                "tasks_completed": 0,
+                "join_date": "2025-12-23"
+            },
+            "tasks": [
+                {
+                    "area": "Nutrition",
+                    "description": "water contant in body",
+                    "required_fields": [
+                        {
+                            "field_name": "amount",
+                            "field_type": "Text"
+                        }
+                    ],
+                    "title": "Water"
+                },
+                {
+                    "area": "Learning",
+                    "description": "study data",
+                    "required_fields": [
+                        {
+                            "field_name": "time for lacture",
+                            "field_type": "Text"
+                        },
+                        {
+                            "field_name": "time for pyq",
+                            "field_type": "Text"
+                        },
+                        {
+                            "field_name": "time for revision ",
+                            "field_type": "Text"
+                        }
+                    ],
+                    "title": "preparation "
+                }
+            ],
+            "Data": [
+                {
+                    "timestamp": "2026-01-02 11:59:30",
+                    "values": [
+                        "100",
+                        "1",
+                        "1",
+                        "1"
+                    ]
+                },
+                {
+                    "timestamp": "2026-01-02 11:59:43",
+                    "values": [
+                        "103",
+                        "2",
+                        "1",
+                        "1"
+                    ]
+                },
+                {
+                    "timestamp": "2026-01-02 12:00:00",
+                    "values": [
+                        "50",
+                        "2",
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "timestamp": "2026-01-03 20:42:26",
+                    "values": [
+                        "54",
+                        "1",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "timestamp": "2026-01-03 21:21:47",
+                    "values": [
+                        "200",
+                        "1",
+                        "1",
+                        "1"
+                    ]
+                },
+                {
+                    "timestamp": "2026-01-07 14:09:37",
+                    "values": [
+                        "54",
+                        "1",
+                        "1",
+                        "1"
+                    ]
+                }
+            ]
+        },
+        {
+            "username": "r",
+            "email": "r",
+            "password": "scrypt:32768:8:1$FDDjp0ZwYqsnIeYW$eaef86be29cdabf1dafdb8b6f5b1f864734e2cee8c276330c1d799b1ba8ac8d2ad6f51007d0edf8fb040a2f67184a69a7875ce4f0526465d18b54bad6fe2a217",
+            "profile": {
+                "tasks_completed": 0,
+                "join_date": "2025-12-23"
+            },
+            "tasks": [
+                {
+                    "area": "Health",
+                    "description": "she said the sect had not had any chance to do so in a matter and was present ",
+                    "required_fields": [
+                        {
+                            "field_name": "he",
+                            "field_type": "Number"
+                        }
+                    ],
+                    "title": "go"
+                }
+            ],
+            "Data": []
+        }
     ]
 }

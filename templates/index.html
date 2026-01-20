@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audio Dashboard</title>
+    <style>
+        body {
+            background: #0f172a;
+            color: #e5e7eb;
+            font-family: Arial;
+            padding: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #020617;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.6);
+        }
+        .title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        button {
+            background: #38bdf8;
+            border: none;
+            padding: 6px 12px;
+            margin: 5px 0;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+        audio {
+            width: 100%;
+            margin-top: 8px;
+        }
+        pre {
+            background: #020617;
+            padding: 10px;
+            max-height: 150px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+<h2>🎧 Audio Processing Dashboard</h2>
+
+<div class="grid">
+{% for c in cards %}
+    <div class="card">
+        <div class="title">📄 {{ c.name }}</div>
+
+        <a href="/process/{{ c.name }}">
+            <button>⚙ Process</button>
+        </a>
+
+        {% if c.wav %}
+            <audio id="{{ c.name }}" controls>
+                <source src="/file/{{ c.wav }}" type="audio/wav">
+            </audio>
+        {% endif %}
+
+        {% if c.txt %}
+            <pre>{{ open('uploads/' + c.txt).read() }}</pre>
+        {% else %}
+            <small>No transcription yet</small>
+        {% endif %}
+    </div>
+{% endfor %}
+</div>
+
+</body>
+</html>

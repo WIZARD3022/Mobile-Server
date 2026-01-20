@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ username }} - Audio</title>
+    <style>
+        body { background:#020617; color:#e5e7eb; font-family:Arial; padding:20px; }
+        .grid {
+            display:grid;
+            grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+            gap:20px;
+        }
+        .card {
+            background:#020617;
+            border:1px solid #1e293b;
+            padding:15px;
+            border-radius:12px;
+        }
+        audio { width:100%; margin-top:10px; }
+        pre {
+            background:#020617;
+            padding:10px;
+            max-height:150px;
+            overflow:auto;
+            white-space:pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+<h2>🎧 {{ username }} - Audio Files</h2>
+<a href="/">⬅ Back to users</a>
+
+<div class="grid">
+{% for a in audios %}
+    <div class="card">
+        <b>📄 {{ a.file }}</b>
+
+        <audio controls>
+            <source src="/media/{{ username }}/{{ a.file }}" type="audio/wav">
+        </audio>
+
+        <pre>{{ a.text }}</pre>
+    </div>
+{% endfor %}
+</div>
+
+</body>
+</html>

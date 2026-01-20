@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Users</title>
+    <style>
+        body { background:#0f172a; color:#e5e7eb; font-family:Arial; }
+        .grid { display:grid; grid-template-columns:repeat(auto-fill,200px); gap:20px; }
+        .card {
+            background:#020617;
+            padding:20px;
+            border-radius:12px;
+            text-align:center;
+            cursor:pointer;
+        }
+        a { color:#38bdf8; text-decoration:none; }
+    </style>
+</head>
+<body>
+
+<h2>👤 Users</h2>
+
+<div class="grid">
+{% for user in users %}
+    <a href="/user/{{ user }}">
+        <div class="card">
+            👤 {{ user }}
+        </div>
+    </a>
+{% endfor %}
+</div>
+
+</body>
+</html>
